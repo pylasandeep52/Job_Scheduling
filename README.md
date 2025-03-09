@@ -12,7 +12,7 @@ This project implements **Johnson's Algorithm** (for 2 & 3 machines) and **Palme
 
 ---
 
-## 1️⃣ Installation
+## 1) Installation
 
 Clone the repository and navigate to the project folder:
 ```sh
@@ -30,48 +30,7 @@ pip install -r requirements.txt
 
 ---
 
-## 2️⃣ Running the Application
-
-### Run Flask API (app.py)
-```sh
-python app.py
-```
-API will run at `http://127.0.0.1:5000/`.
-
-### Run Job Scheduling Script (schedule.py)
-```sh
-python schedule.py
-```
-This script asks for user input and calculates the optimal job sequence.
-
----
-
-## 3️⃣ API Endpoints
-
-### `POST /schedule`
-- **Description**: Accepts job processing times and returns an optimal job sequence and makespan.
-- **Request JSON Format:**
-```json
-{
-  "processing_times": [
-    [5, 8, 7],
-    [3, 6, 9],
-    [4, 5, 8]
-  ]
-}
-```
-- **Response JSON Format:**
-```json
-{
-  "sequence": ["J2", "J1", "J3"],
-  "makespan": 20,
-  "schedule": [[5, 13, 20], [8, 14, 23], [12, 19, 28]]
-}
-```
-
----
-
-## 4️⃣ Workflow
+## 2) Workflow
 
 1. **User Inputs** number of jobs, machines, and processing times.
 2. **Algorithm Selection**:
@@ -85,7 +44,7 @@ This script asks for user input and calculates the optimal job sequence.
 
 ---
 
-## 5️⃣ Future Scope 🚀
+## 3) Future Scope 🚀
 - ✅ Implement **NEH Heuristic Algorithm** for flow shop scheduling.
 - ✅ Optimize job sequences using **Genetic Algorithm**.
 - ✅ Extend to **Dynamic Job Scheduling** with real-time job insertion.
@@ -93,17 +52,12 @@ This script asks for user input and calculates the optimal job sequence.
 
 ---
 
-## 6️⃣ Contributing
-Feel free to contribute to this project! Open an issue or submit a pull request.
 
----
-
-## 7️⃣ Author
+## 4) Author
 👤 **Pyla Sandeep**  
 📧 [GitHub](https://github.com/pylasandeep52)
 
 ---
 
-## 8️⃣ License
-This project is licensed under the MIT License.
+
 
