@@ -47,10 +47,11 @@ if st.button("Compute Optimal Job Sequence"):
 
     if sequence is not None:
         st.subheader("🔢 Optimal Job Sequence:")
-        st.write([f"J{i+1}" for i in sequence])
+        sequence_labels= [f"J{i+1}" for i in sequence]
 
         # Compute Makespan
         makespan, job_schedule = schedule.calculate_makespan(sequence, processing_times)
+        st.success(f"✅ Optimal Sequence: {' → '.join(sequence_labels)}")
         st.subheader("⏳ Makespan Time:")
         st.write(f"Total Makespan: {makespan}")
 
